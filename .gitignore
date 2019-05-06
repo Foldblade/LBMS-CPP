@@ -1,3 +1,6 @@
+# Not needed
+.vs
+
 # Prerequisites
 *.d
 
@@ -30,3 +33,4 @@
 *.exe
 *.out
 *.app
+
