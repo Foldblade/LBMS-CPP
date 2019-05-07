@@ -156,10 +156,44 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>bookcon</sender>
+   <signal>clicked()</signal>
+   <receiver>adminitor_con</receiver>
+   <slot>slot4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>364</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>289</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>borrowecon</sender>
+   <signal>clicked()</signal>
+   <receiver>adminitor_con</receiver>
+   <slot>slot5()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>518</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>591</x>
+     <y>376</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>slot1()</slot>
   <slot>slot2()</slot>
   <slot>slot3()</slot>
+  <slot>slot4()</slot>
+  <slot>slot5()</slot>
  </slots>
 </ui>

@@ -14,13 +14,13 @@ class QtGuiClass : public QWidget
 public:
 	QtGuiClass(QWidget *parent = Q_NULLPTR);
 	~QtGuiClass();
-	adminitor_con* x;
-	fail* fa;
+	adminitor_con* x;//为了节省后面一行（当作没看见注释
+	fail* fa;//为了节省后面一行（当作没看见注释
 private:
 	Ui::QtGuiClass ui;
 
 private slots:
-	void slot1();
-	void slot2();
+	void slot1();//返回登陆界面
+	void slot2();//登陆
 };
 #endif // !QTGUICLASS

@@ -16,6 +16,6 @@ private:
 	Ui::search_book ui;
 	search_book_result_no* x;
 private slots:
-	void slot1();//back
-	void slot2();//enter
+	void slot1();//返回功能页
+	void slot2();//查询图书信息
 };

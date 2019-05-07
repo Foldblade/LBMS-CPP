@@ -20,7 +20,7 @@ private:
 	QtGuiClass *x;
 	search_book* x1;
 private slots:
-	void slot1();
-	void slot2();
+	void slot1();//管理员登陆
+	void slot2();//查询图书
 };
 #endif // !QTGUIAPPLICATION5_H
