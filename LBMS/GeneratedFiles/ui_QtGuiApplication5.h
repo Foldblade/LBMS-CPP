@@ -48,10 +48,10 @@ public:
         quit->setGeometry(QRect(490, 300, 93, 28));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(180, 260, 231, 51));
+        label_2->setGeometry(QRect(190, 280, 231, 51));
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(200, 40, 181, 31));
+        label->setGeometry(QRect(120, 30, 351, 81));
         QtGuiApplication5Class->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(QtGuiApplication5Class);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
@@ -72,7 +72,7 @@ public:
         search->setText(QApplication::translate("QtGuiApplication5Class", "\346\237\245\350\257\242\345\233\276\344\271\246", nullptr));
         quit->setText(QApplication::translate("QtGuiApplication5Class", "\351\200\200\345\207\272\347\263\273\347\273\237", nullptr));
         label_2->setText(QApplication::translate("QtGuiApplication5Class", "Made by T.X. & X.H. with \342\235\244 ", nullptr));
-        label->setText(QApplication::translate("QtGuiApplication5Class", "LBMS\345\233\276\344\271\246\351\246\206\345\233\276\344\271\246\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
+        label->setText(QApplication::translate("QtGuiApplication5Class", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt; font-weight:600;\">LBMS\345\233\276\344\271\246\351\246\206\345\233\276\344\271\246\347\256\241\347\220\206\347\263\273\347\273\237</span></p></body></html>", nullptr));
     } // retranslateUi
 
 };

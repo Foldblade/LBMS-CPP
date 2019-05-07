@@ -59,6 +59,8 @@ public:
         QObject::connect(return_2, SIGNAL(clicked()), adminitor_con, SLOT(slot1()));
         QObject::connect(scan, SIGNAL(clicked()), adminitor_con, SLOT(slot2()));
         QObject::connect(selfcen, SIGNAL(clicked()), adminitor_con, SLOT(slot3()));
+        QObject::connect(bookcon, SIGNAL(clicked()), adminitor_con, SLOT(slot4()));
+        QObject::connect(borrowecon, SIGNAL(clicked()), adminitor_con, SLOT(slot5()));
 
         QMetaObject::connectSlotsByName(adminitor_con);
     } // setupUi
