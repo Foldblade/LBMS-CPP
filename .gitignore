@@ -1,5 +1,7 @@
 # Not needed
 .vs
+GeneratedFiles
+**.config.json
 # User-specific files
 *.suo
 *.user
