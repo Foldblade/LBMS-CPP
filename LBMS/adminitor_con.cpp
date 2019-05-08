@@ -3,8 +3,11 @@
 #include "success.h"
 #include "qstring.h"
 #include "personal_cen.h"
-
-
+#include "search_book_man.h"
+#include "search_book_result_man.h"
+#include "personal_change_password.h"
+#include "personal_change_name.h"
+#include "borrow_return_book.h"
 adminitor_con::adminitor_con(QWidget *parent)
 	: QWidget(parent)
 {
@@ -24,6 +27,16 @@ void adminitor_con::slot3() {
 	x->show();
 	this->hide();
 }//personal_cen
+void adminitor_con::slot4() {
+	search_book_man* x = new search_book_man;
+	x->show();
+	this->hide();
+}
+void adminitor_con::slot5() {
+	borrow_return_book* x = new borrow_return_book;
+	x->show();
+	this->hide();
+}
 void scan_input::slot1() {
 	adminitor_con* x = new adminitor_con;
 	x->show();
@@ -48,8 +61,38 @@ void personal_cen::slot1() {
 	this->hide();
 }//return 
 void personal_cen::slot2() {
-
+	personal_change_password* x = new personal_change_password;
+	x->show();
+	this->hide();
 }//change password
 void personal_cen::slot3() {
-
+	personal_change_name* x = new personal_change_name;
+	x->show();
+	this->hide();
 }//change name
+void search_book_man::slot1() {
+	adminitor_con* x = new adminitor_con;
+	x->show();
+	this->hide();
+}//返回
+void search_book_man::slot2() {
+	search_book_result_man* x = new search_book_result_man;
+	x->show();
+	this->hide();
+}//查询
+void borrow_return_book::slot1() {
+	adminitor_con* x = new adminitor_con;
+	x->show();
+	this->hide();
+}//返回
+void borrow_return_book::slot2() {
+	success* x = new success;
+	x->show();
+}//借书
+void borrow_return_book::slot3() {
+	success* x = new success;
+	x->show();
+}//还书
+void borrow_return_book::slot4() {
+
+}//opencv

@@ -1,5 +1,6 @@
 #include "search_book.h"
 #include "qstring.h"
+#include "search_book_result_no.h"
 
 search_book::search_book(QWidget *parent)
 	: QWidget(parent)

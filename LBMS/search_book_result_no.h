@@ -14,5 +14,5 @@ public:
 private:
 	Ui::search_book_result_no ui;
 private slots:
-	void slot1();//∑µªÿ≤È—Ø“≥
+	void slot1();
 };
