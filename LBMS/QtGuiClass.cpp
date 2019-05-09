@@ -1,6 +1,9 @@
 #include "QtGuiClass.h"
+#include "QMessageBox"
 #include "qstring.h"
 #include "json.h"
+
+
 
 QtGuiClass::QtGuiClass(QWidget *parent)
 	: QWidget(parent)
@@ -26,7 +29,7 @@ void QtGuiClass::slot2() {
 		this->hide();
 	}
 	else {
-		fa->show();
+		QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("用户名或密码错误，请重试。"), QMessageBox::Ok);
 	}
 }
 void adminitor_con::slot1() {
