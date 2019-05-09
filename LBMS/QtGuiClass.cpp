@@ -4,7 +4,6 @@
 #include "json.h"
 
 
-
 QtGuiClass::QtGuiClass(QWidget *parent)
 	: QWidget(parent)
 {
@@ -29,6 +28,7 @@ void QtGuiClass::slot2() {
 		this->hide();
 	}
 	else {
+		// Message box 形式提出错误 -by F.B.
 		QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("用户名或密码错误，请重试。"), QMessageBox::Ok);
 	}
 }
