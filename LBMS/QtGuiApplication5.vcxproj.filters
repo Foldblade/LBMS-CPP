@@ -42,9 +42,6 @@
     <ClCompile Include="search_book.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="search_book_result_no.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="adminitor_con.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -60,6 +57,24 @@
     <ClCompile Include="personal_cen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="search_book_result_no.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="search_book_man.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="search_book_result_man.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="personal_change_password.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="personal_change_name.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="borrow_return_book.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtGuiApplication5.h">
@@ -69,9 +84,6 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="search_book.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="search_book_result_no.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="adminitor_con.h">
@@ -89,6 +101,24 @@
     <QtMoc Include="personal_cen.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="search_book_result_no.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="search_book_man.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="search_book_result_man.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="personal_change_password.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="personal_change_name.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="borrow_return_book.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QtGuiApplication5.ui">
@@ -98,9 +128,6 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="search_book.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="search_book_result_no.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="adminitor_con.ui">
@@ -116,6 +143,24 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="personal_cen.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="search_book_result_no.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="search_book_man.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="search_book_result_man.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="personal_change_password.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="personal_change_name.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="borrow_return_book.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

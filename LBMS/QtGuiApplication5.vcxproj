@@ -115,13 +115,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="adminitor_con.cpp" />
+    <ClCompile Include="borrow_return_book.cpp" />
     <ClCompile Include="fail.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="personal_cen.cpp" />
+    <ClCompile Include="personal_change_name.cpp" />
+    <ClCompile Include="personal_change_password.cpp" />
     <ClCompile Include="QtGuiApplication5.cpp" />
     <ClCompile Include="QtGuiClass.cpp" />
     <ClCompile Include="scan_input.cpp" />
     <ClCompile Include="search_book.cpp" />
+    <ClCompile Include="search_book_man.cpp" />
+    <ClCompile Include="search_book_result_man.cpp" />
     <ClCompile Include="search_book_result_no.cpp" />
     <ClCompile Include="success.cpp" />
   </ItemGroup>
@@ -130,12 +135,17 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="adminitor_con.ui" />
+    <QtUic Include="borrow_return_book.ui" />
     <QtUic Include="fail.ui" />
     <QtUic Include="personal_cen.ui" />
+    <QtUic Include="personal_change_name.ui" />
+    <QtUic Include="personal_change_password.ui" />
     <QtUic Include="QtGuiApplication5.ui" />
     <QtUic Include="QtGuiClass.ui" />
     <QtUic Include="scan_input.ui" />
     <QtUic Include="search_book.ui" />
+    <QtUic Include="search_book_man.ui" />
+    <QtUic Include="search_book_result_man.ui" />
     <QtUic Include="search_book_result_no.ui" />
     <QtUic Include="success.ui" />
   </ItemGroup>
@@ -147,9 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="search_book.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="search_book_result_no.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="adminitor_con.h" />
@@ -165,6 +172,24 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="personal_cen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="search_book_result_no.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="search_book_man.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="search_book_result_man.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="personal_change_password.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="personal_change_name.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="borrow_return_book.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
