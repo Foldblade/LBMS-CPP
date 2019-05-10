@@ -1,7 +1,8 @@
 # Not needed
 .vs
 GeneratedFiles
-**.config.json
+*.config.json
+!.config(origin).json
 # User-specific files
 *.suo
 *.user
