@@ -1,4 +1,5 @@
 #include "QtGuiClass.h"
+#include "QTextToSpeech"
 #include "QMessageBox"
 #include "qstring.h"
 #include "json.h"
@@ -25,6 +26,16 @@ void QtGuiClass::slot2() {
 	code = ui.usercode->text();
 	if (name == con_name && code == con_passwd) {
 		x->show();
+		QTextToSpeech* tts = new QTextToSpeech(this);
+		// tts->setLocale(QLocale::Chinese); // 设置语言
+		// tts->setRate(-0.1);// 设置语速-1.0到1.0
+		// tts->setPitch(1.0);// 设置音高-1.0到1.0
+		// tts->setVolume(1.0);// 设置音量0.0-1.0
+		if (tts->state() == QTextToSpeech::Ready)
+		{
+			tts->say(name);
+			tts->say(QString::fromLocal8Bit("高级驾驶员。道路千万条，安全第一条，行车不规范，亲人两行泪。"));
+		}
 		this->hide();
 	}
 	else {
