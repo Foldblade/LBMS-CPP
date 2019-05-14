@@ -26,6 +26,7 @@ void QtGuiClass::slot2() {
 	code = ui.usercode->text();
 	if (name == con_name && code == con_passwd) {
 		x->show();
+		// 来几行小彩蛋 -by F.B.
 		QTextToSpeech* tts = new QTextToSpeech(this);
 		// tts->setLocale(QLocale::Chinese); // 设置语言
 		// tts->setRate(-0.1);// 设置语速-1.0到1.0

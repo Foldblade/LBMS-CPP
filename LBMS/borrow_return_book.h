@@ -14,8 +14,8 @@ public:
 private:
 	Ui::borrow_return_book ui;
 private slots:
-	void slot1();
-	void slot2();
-	void slot3();
-	void slot4();
+	void slot1(); // 回到管理中心
+	void slot2(); // 借书
+	void slot3(); // 还书
+	void slot4(); // 开启扫码
 };

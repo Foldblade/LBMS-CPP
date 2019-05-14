@@ -2,6 +2,7 @@
 #include "scan_input.h"
 #include "success.h"
 #include "qstring.h"
+#include "scanner.h"
 #include "personal_cen.h"
 #include "search_book_man.h"
 #include "search_book_result_man.h"
@@ -53,7 +54,8 @@ void scan_input::slot2() {
 	x->show();
 }//add
 void scan_input::slot3() {
-
+	QString ISBN = QString::fromLocal8Bit(get_ISBN().c_str());
+	ui.isbn->setText(ISBN);
 }//opencv
 void personal_cen::slot1() {
 	adminitor_con* x = new adminitor_con;
@@ -94,5 +96,6 @@ void borrow_return_book::slot3() {
 	x->show();
 }//»¹Êé
 void borrow_return_book::slot4() {
-
+	QString ISBN = QString::fromLocal8Bit(get_ISBN().c_str());
+	ui.isbn->setText(ISBN);
 }//opencv
