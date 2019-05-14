@@ -85,6 +85,11 @@ string get_ISBN() {
 		if (cvWaitKey(50) == 27) {
 			break;
 		}
+		// 按叉可推出
+		if (!cvGetWindowHandle("Scanner"))
+		{
+			break;
+		}
 	}
 stop:
 	// 释放灰度图
