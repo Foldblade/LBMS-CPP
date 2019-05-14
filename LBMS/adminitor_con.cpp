@@ -49,7 +49,6 @@ void scan_input::slot2() {
 	name = ui.name->text();//书名
 	writer = ui.writer->text();//作者
 	press = ui.press->text();//出版社
-	book_no = ui.book_no->text();//书号
 	success* x = new success;
 	x->show();
 }//add
