@@ -15,4 +15,5 @@ private:
 	Ui::search_book_result_man ui;
 private slots:
 	void slot1();
+	void slot2();
 };

@@ -15,3 +15,6 @@ void search_book_result_man::slot1() {
 	x->show();
 	this->hide();
 }
+void search_book_result_man::slot2() {
+
+}//保存修改后的图书信息
