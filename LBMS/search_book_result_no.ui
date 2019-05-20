@@ -18,13 +18,12 @@
     <rect>
      <x>40</x>
      <y>40</y>
-     <width>211</width>
+     <width>351</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>LBMS 图书馆图书管理系统
-</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;LBMS 图书馆图书管理系统&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="return_2">

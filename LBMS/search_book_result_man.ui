@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1001</width>
-    <height>631</height>
+    <width>850</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,22 +16,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>40</x>
      <y>40</y>
-     <width>181</width>
+     <width>351</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>LBMS 图书馆图书管理系统
-</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;LBMS 图书馆图书管理系统&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="return_2">
    <property name="geometry">
     <rect>
-     <x>830</x>
-     <y>580</y>
+     <x>690</x>
+     <y>540</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -43,8 +42,8 @@
   <widget class="QPushButton" name="save">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>580</y>
+     <x>390</x>
+     <y>540</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -56,10 +55,10 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>70</y>
-     <width>901</width>
-     <height>491</height>
+     <x>40</x>
+     <y>90</y>
+     <width>771</width>
+     <height>411</height>
     </rect>
    </property>
    <row>
