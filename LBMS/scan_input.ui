@@ -57,10 +57,10 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>150</y>
-     <width>72</width>
-     <height>15</height>
+     <x>121</x>
+     <y>157</y>
+     <width>32</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -70,10 +70,10 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>190</y>
-     <width>72</width>
-     <height>15</height>
+     <x>121</x>
+     <y>194</y>
+     <width>30</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -83,10 +83,10 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>230</y>
-     <width>72</width>
-     <height>15</height>
+     <x>121</x>
+     <y>231</y>
+     <width>30</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -96,10 +96,10 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>270</y>
-     <width>72</width>
-     <height>15</height>
+     <x>121</x>
+     <y>268</y>
+     <width>45</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -110,9 +110,9 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>150</y>
-     <width>161</width>
-     <height>21</height>
+     <y>157</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
@@ -120,9 +120,9 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>190</y>
-     <width>161</width>
-     <height>21</height>
+     <y>194</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
@@ -130,9 +130,9 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>230</y>
-     <width>161</width>
-     <height>21</height>
+     <y>231</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
@@ -140,9 +140,9 @@
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>270</y>
-     <width>161</width>
-     <height>21</height>
+     <y>268</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
@@ -170,6 +170,41 @@
    </property>
    <property name="text">
     <string>返回管理中心</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="amount">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>305</y>
+     <width>171</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhPreferNumbers</set>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>121</x>
+     <y>305</y>
+     <width>30</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>数量</string>
    </property>
   </widget>
  </widget>
