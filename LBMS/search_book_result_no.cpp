@@ -1,10 +1,21 @@
 #include "search_book_result_no.h"
+//#include <qtextcodec.h>
+
 
 search_book_result_no::search_book_result_no(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
+	//QTextCodec* codec = QTextCodec::codecForName("GBK");
 	ui.tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	int NumOfReg=10000;
+	ui.tableWidget->setColumnCount(5);
+	ui.tableWidget->setRowCount(NumOfReg);
+	/* 设置 tableWidget */
+	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "ISBN" << "book name" << "writer" << "pubisher" << "in library");
+	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
+	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
+	ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
 	QString content[5][5];
 	content[0][0] = { "1" }; content[0][1] = { "a" }; content[0][2] = { "b" }; content[0][3] = { "c" }; content[0][4] = { "d" };
 	content[1][0] = { "2" }; content[1][1] = { "a" }; content[1][2] = { "b" }; content[1][3] = { "c" }; content[1][4] = { "d" };
