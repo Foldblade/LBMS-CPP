@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>359</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,10 +44,10 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>100</y>
-     <width>72</width>
-     <height>15</height>
+     <x>31</x>
+     <y>101</y>
+     <width>40</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -57,10 +57,10 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>130</y>
-     <width>72</width>
-     <height>15</height>
+     <x>31</x>
+     <y>132</y>
+     <width>45</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -70,10 +70,10 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>160</y>
-     <width>72</width>
-     <height>15</height>
+     <x>31</x>
+     <y>163</y>
+     <width>45</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -83,10 +83,10 @@
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>190</y>
-     <width>72</width>
-     <height>15</height>
+     <x>31</x>
+     <y>194</y>
+     <width>60</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -96,40 +96,40 @@
   <widget class="QLineEdit" name="ISBN">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>100</y>
-     <width>113</width>
-     <height>21</height>
+     <x>98</x>
+     <y>101</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
   <widget class="QLineEdit" name="book_name">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>130</y>
-     <width>113</width>
-     <height>21</height>
+     <x>98</x>
+     <y>132</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
   <widget class="QLineEdit" name="writer">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>160</y>
-     <width>113</width>
-     <height>21</height>
+     <x>98</x>
+     <y>163</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
   <widget class="QLineEdit" name="publish">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>190</y>
-     <width>113</width>
-     <height>21</height>
+     <x>98</x>
+     <y>194</y>
+     <width>171</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
@@ -137,7 +137,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>230</y>
+     <y>280</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -157,6 +157,29 @@
    </property>
    <property name="text">
     <string>返回管理中心</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>225</y>
+     <width>45</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>数量：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="many">
+   <property name="geometry">
+    <rect>
+     <x>98</x>
+     <y>225</y>
+     <width>171</width>
+     <height>24</height>
+    </rect>
    </property>
   </widget>
  </widget>

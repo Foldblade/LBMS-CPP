@@ -2,7 +2,9 @@
 .vs
 GeneratedFiles
 *.config.json
+*.sql_config.json
 !.config(origin).json
+!.sql_config(origin).json
 # User-specific files
 *.suo
 *.user
