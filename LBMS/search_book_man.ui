@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>359</height>
+    <height>321</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -136,8 +136,8 @@
   <widget class="QPushButton" name="search">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>280</y>
+     <x>140</x>
+     <y>240</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -157,29 +157,6 @@
    </property>
    <property name="text">
     <string>返回管理中心</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>31</x>
-     <y>225</y>
-     <width>45</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>数量：</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="many">
-   <property name="geometry">
-    <rect>
-     <x>98</x>
-     <y>225</y>
-     <width>171</width>
-     <height>24</height>
-    </rect>
    </property>
   </widget>
  </widget>
