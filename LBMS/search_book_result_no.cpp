@@ -12,7 +12,7 @@ search_book_result_no::search_book_result_no(QWidget *parent)
 	ui.tableWidget->setColumnCount(5);
 	ui.tableWidget->setRowCount(NumOfReg);
 	/* 设置 tableWidget */
-	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "ISBN" << "book name" << "writer" << "pubisher" << "in library");
+	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "ISBN" << QString::fromLocal8Bit("书名") << QString::fromLocal8Bit("作者") << QString::fromLocal8Bit("出版社") << QString::fromLocal8Bit("馆藏情况"));
 	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
 	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
 	ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
