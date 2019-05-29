@@ -6,10 +6,10 @@ search_book_result_man::search_book_result_man(QWidget *parent)
 	ui.setupUi(this);
 	//QTextCodec* codec = QTextCodec::codecForName("GBK");
 	int NumOfReg = 10000;
-	ui.tableWidget->setColumnCount(5);
+	ui.tableWidget->setColumnCount(7);
 	ui.tableWidget->setRowCount(NumOfReg);
 	/* 设置 tableWidget */
-	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "ISBN" << QString::fromLocal8Bit("书名") << QString::fromLocal8Bit("作者") << QString::fromLocal8Bit("出版社") << QString::fromLocal8Bit("馆藏情况"));
+	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "ISBN" << QString::fromLocal8Bit("书名") << QString::fromLocal8Bit("作者") << QString::fromLocal8Bit("出版社") << QString::fromLocal8Bit("总数")<< QString::fromLocal8Bit("馆藏") << QString::fromLocal8Bit("借出")<<"id");
 	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
 	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
 	ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
@@ -21,7 +21,8 @@ search_book_result_man::search_book_result_man(QWidget *parent)
 	content[4][0] = { "5" }; content[4][1] = { "a" }; content[4][2] = { "b" }; content[4][3] = { "c" }; content[4][4] = { "d" };
 	/*int linenumber, columnnumber;
 	linenumber = ;
-	columnnumber = ;
+	columnnumber = 6;
+	QString content[linenumber][columnnumber];
 	for (int i = 0; i < linenumber; i++) {
 		for (int j = 0; j < columnnumber; j++) {
 			QTableWidgetItem* item = new QTableWidgetItem(content[i][j]);
