@@ -93,6 +93,9 @@
     <ClCompile Include="json.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="domysql.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtGuiApplication5.h">
@@ -302,9 +305,15 @@
     <ClInclude Include="scanner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="domysql.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".config.json">
+      <Filter>Config Files</Filter>
+    </None>
+    <None Include=".sql_config.json">
       <Filter>Config Files</Filter>
     </None>
   </ItemGroup>

@@ -9,12 +9,6 @@ Json::Json(string jsonFileName) { // 构造json
 	ifstream ifs(jsonFileName);
 	IStreamWrapper isw(ifs);
 	doc.ParseStream(isw);
-	// 2. 利用 DOM 作出修改。
-	// Value& s = doc["stars"];
-	// s.SetInt(s.GetInt() + 1);
-	// 3. 把 DOM 转换（stringify）成 JSON。
-	Writer<StringBuffer> writer(buffer);
-	doc.Accept(writer);
 }
 
 void Json::SaveJson(string saveFileName) { // 保存json
@@ -43,4 +37,16 @@ string Json::ToString(string jsonFileName) {
 void Json::StrToJson(string str) {
 	const char* json = str.c_str();
 	doc.Parse(json);
+}
+
+void Json::modify(string key, string value) {
+	Value& x = doc[key.c_str()];
+	const char* changer = value.c_str();
+	Value y(StringRef(changer, value.length()));
+}
+
+void Json::update() {
+	// 3. 把 DOM 转换（stringify）成 JSON。
+	Writer<StringBuffer> writer(buffer);
+	doc.Accept(writer);
 }

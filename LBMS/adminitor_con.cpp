@@ -9,6 +9,12 @@
 #include "personal_change_password.h"
 #include "personal_change_name.h"
 #include "borrow_return_book.h"
+#include "domysql.h"
+
+using namespace std;
+using namespace sql;
+using namespace boost;
+
 adminitor_con::adminitor_con(QWidget *parent)
 	: QWidget(parent)
 {
@@ -61,6 +67,7 @@ void personal_cen::slot1() {
 	x->show();
 	this->hide();
 }//return 
+
 void personal_cen::slot2() {
 	personal_change_password* x = new personal_change_password;
 	x->show();
@@ -107,3 +114,4 @@ void borrow_return_book::slot4() {
 	QString ISBN = QString::fromLocal8Bit(get_ISBN().c_str());
 	ui.isbn->setText(ISBN);
 }//opencv
+

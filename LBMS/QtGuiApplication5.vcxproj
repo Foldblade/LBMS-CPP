@@ -31,8 +31,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>$(OPENCV_DIR)\build\include;$(OPENCV_DIR)\build\include\opencv;$(OPENCV_DIR)\build\include\opencv2;$(ZBAR_DIR)\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(OPENCV_DIR)\build\x86\vc14\lib;$(ZBAR_DIR)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(OPENCV_DIR)\build\include;$(OPENCV_DIR)\build\include\opencv;$(OPENCV_DIR)\build\include\opencv2;$(ZBAR_DIR)\include;$(BOOST_DIR);$(MYSQL_CONNECTOR_DIR)\include;$(MYSQL_CONNECTOR_DIR)\lib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_DIR)\lib32-msvc-14.1;$(OPENCV_DIR)\build\x86\vc14\lib;$(ZBAR_DIR)\lib;$(MYSQL_CONNECTOR_DIR)\lib\opt;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
@@ -67,7 +67,7 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5TextToSpeech.lib;libzbar-0.lib;opencv_calib3d2413d.lib;opencv_contrib2413d.lib;opencv_core2413d.lib;opencv_features2d2413d.lib;opencv_flann2413d.lib;opencv_gpu2413d.lib;opencv_highgui2413d.lib;opencv_imgproc2413d.lib;opencv_legacy2413d.lib;opencv_ml2413d.lib;opencv_nonfree2413d.lib;opencv_objdetect2413d.lib;opencv_ocl2413d.lib;opencv_photo2413d.lib;opencv_stitching2413d.lib;opencv_superres2413d.lib;opencv_ts2413d.lib;opencv_video2413d.lib;opencv_videostab2413d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5TextToSpeech.lib;libzbar-0.lib;opencv_calib3d2413d.lib;opencv_contrib2413d.lib;opencv_core2413d.lib;opencv_features2d2413d.lib;opencv_flann2413d.lib;opencv_gpu2413d.lib;opencv_highgui2413d.lib;opencv_imgproc2413d.lib;opencv_legacy2413d.lib;opencv_ml2413d.lib;opencv_nonfree2413d.lib;opencv_objdetect2413d.lib;opencv_ocl2413d.lib;opencv_photo2413d.lib;opencv_stitching2413d.lib;opencv_superres2413d.lib;opencv_ts2413d.lib;opencv_video2413d.lib;opencv_videostab2413d.lib;mysqlcppconn.lib;mysqlcppconn-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <QtMoc>
       <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="adminitor_con.cpp" />
     <ClCompile Include="borrow_return_book.cpp" />
+    <ClCompile Include="domysql.cpp" />
     <ClCompile Include="fail.cpp" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
@@ -195,6 +196,7 @@
     <QtMoc Include="borrow_return_book.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="domysql.h" />
     <ClInclude Include="json.h" />
     <ClInclude Include="rapidjson\allocators.h" />
     <ClInclude Include="rapidjson\cursorstreamwrapper.h" />
@@ -236,6 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".config.json" />
+    <None Include=".sql_config.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

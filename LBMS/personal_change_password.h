@@ -14,6 +14,6 @@ public:
 private:
 	Ui::personal_change_password ui;
 private slots:
-	void slot1();
-	void slot2();
+	void slot1();// ∑µªÿ
+	void slot2();// »∑»œ
 };
