@@ -25,8 +25,8 @@ void search_book::slot2() {
 	QString publishing_house = ui.publishing_house->text();
 	//这里需要加入数据库；
 	/*So the left work are made by F.B.*/
-	Operate search_book_no;
-	search_book_no.searchBook(isbn.toStdString(), book_name.toStdString(), writer.toStdString(), publishing_house.toStdString());
+	// Operate search_book_no;
+	// search_book_no.searchBook(isbn.toStdString(), book_name.toStdString(), writer.toStdString(), publishing_house.toStdString());
 	x->show();
 	this->hide();
 }
