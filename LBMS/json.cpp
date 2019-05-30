@@ -39,10 +39,14 @@ void Json::StrToJson(string str) {
 	doc.Parse(json);
 }
 
-void Json::modify(string key, string value) {
-	Value& x = doc[key.c_str()];
-	const char* changer = value.c_str();
-	Value y(StringRef(changer, value.length()));
+void Json::strModify(string key, string value) {
+	Value& s = doc[key.c_str()];
+	s.SetString(value.c_str(), doc.GetAllocator());
+	/* 说实话这里不太懂
+		文档：
+		http://rapidjson.org/zh-cn/classrapidjson_1_1_generic_value.html#a3e930bffb40a78e570e3deef461f0532
+		http://rapidjson.org/zh-cn/classrapidjson_1_1_generic_document.html#ad92c6cd025d411258d1f2ad890e2ee3f
+	*/
 }
 
 void Json::update() {

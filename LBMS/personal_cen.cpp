@@ -40,9 +40,9 @@ void personal_change_password::slot2() {// 修改密码确认
 			// Message box 形式提出错误
 		}
 		else {
-			config.modify("password", newPasswd);
+			config.strModify("password", newPasswd);
 			config.update();
-			config.SaveJson(".config2.json");
+			config.SaveJson(".config.json");
 			QMessageBox::information(NULL, QString::fromLocal8Bit("成功"), QString::fromLocal8Bit("密码已更新，下次登录请用新密码。"), QMessageBox::Ok);
 		}
 	}

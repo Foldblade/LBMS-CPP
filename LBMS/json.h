@@ -91,6 +91,6 @@ public:
 	 *     将string解析到Json类对象中，无
 	 */
 	void StrToJson(string str);
-	void modify(string key, string value);
+	void strModify(string key, string value);
 	void update();
 };
