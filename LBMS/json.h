@@ -91,6 +91,27 @@ public:
 	 *     将string解析到Json类对象中，无
 	 */
 	void StrToJson(string str);
+
+	/**
+	 * @brief 函数strModify: 修改类型为string的value
+	 * 注意，修改后要配合下面的update()使用！
+	 *
+	 * @param
+	 *     string key: 要修改value的key
+	 *     string value: 要修改的value
+	 * @return
+	 *     无
+	 */
 	void strModify(string key, string value);
+
+	/**
+	 * @brief 函数update: 确认修改并更新json
+	 *
+	 * @param
+	 *     无
+	 *
+	 * @return
+	 *     无
+	 */
 	void update();
 };

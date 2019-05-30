@@ -12,6 +12,7 @@
 #include <zbar.h>
 #include <iostream>
 #include <string>
+#include "json.h"
 
 using namespace std;
 using namespace zbar;
@@ -26,9 +27,11 @@ using namespace zbar;
  *     string 获取的ISBN13
  */
 string get_ISBN() {
+	Json config(".config.json"); // 读取Json文件
+	int cameraId = config.doc["cameraid"].GetInt(); // 提取cameraid
 	// 打开摄像头，从摄像头中获取视频
 	string isbn13 = "未能读取到ISBN条码";
-	CvCapture* capture = cvCreateCameraCapture(1);
+	CvCapture* capture = cvCreateCameraCapture(cameraId);
 	// 摄像头不存在
 	if (!capture) {
 		QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("未检测到摄像头。请尝试修改摄像头ID或重新运行。"), QMessageBox::Ok);
