@@ -180,10 +180,14 @@ Windows端下载【官网】：https://www.dev47apps.com/droidcam/windows/
 - [QT messageBox](https://blog.csdn.net/dsg333/article/details/9665885)
 - [QT messagebox 乱码解决](https://blog.csdn.net/XuePiaoFei1/article/details/46356293)
 
+#### RapidJSON
+- [RapidJSON 文档](http://rapidjson.org/zh-cn/)
+
 ### 第三方
 
 - [OpenCV](https://opencv.org/)
 - [Zbar](http://zbar.sourceforge.net/index.html)
 - [MySQL Connector/C++](https://downloads.mysql.com/archives/c-cpp/)
 - [boost](https://www.boost.org/)
+- [RapidJSON](http://rapidjson.org/)
 
