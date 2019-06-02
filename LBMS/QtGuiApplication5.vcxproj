@@ -127,12 +127,12 @@
     <ClCompile Include="personal_change_password.cpp" />
     <ClCompile Include="QtGuiApplication5.cpp" />
     <ClCompile Include="QtGuiClass.cpp" />
+    <ClCompile Include="scanner.cpp" />
     <ClCompile Include="scan_input.cpp" />
     <ClCompile Include="search_book.cpp" />
     <ClCompile Include="search_book_man.cpp" />
     <ClCompile Include="search_book_result_man.cpp" />
     <ClCompile Include="search_book_result_no.cpp" />
-    <ClCompile Include="success.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtGuiApplication5.h" />
@@ -151,7 +151,6 @@
     <QtUic Include="search_book_man.ui" />
     <QtUic Include="search_book_result_man.ui" />
     <QtUic Include="search_book_result_no.ui" />
-    <QtUic Include="success.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QtGuiApplication5.qrc" />
@@ -167,9 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="fail.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="success.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="scan_input.h" />
