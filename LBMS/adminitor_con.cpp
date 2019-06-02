@@ -19,6 +19,10 @@ adminitor_con::adminitor_con(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
+	Json config(".config.json"); // 读取Json文件 TODO: 改成SQL？
+	string con_name = config.doc["user"].GetString();// 提取用户名
+	string welcome = con_name + "，欢迎您！";
+	ui.welcome->setText(QString::fromLocal8Bit(welcome.data()));
 }
 
 adminitor_con::~adminitor_con()

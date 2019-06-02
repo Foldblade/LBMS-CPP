@@ -196,6 +196,12 @@ Operate p;
 		p.borrow_book("9787220112775");
 		p.return_book("9787220112775");
 		p.modify_book(15, "9787220112775", "平安朝的生活与文学", "[日] 池田龟鉴", "后浪丨四川人民出版社", 4, 3, 1);
+
+		p.searchBook("9787220112775", "平安朝的生活与文学", "[日] 池田龟鉴", "后浪丨四川人民出版社");
+		cout << "——————————" << endl;
+		for (int i = 0; i < p.length; i++) {
+			cout << any_cast<string>(p.results[i]["ISBN"]) << "\t" << any_cast<int>(p.results[i]["many"]) << endl;
+		}
 	}
 	else {
 		cout << "ERROR" << endl;

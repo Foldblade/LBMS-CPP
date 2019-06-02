@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>456</width>
-    <height>403</height>
+    <height>362</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,16 @@
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>60</y>
-     <width>181</width>
-     <height>41</height>
+     <y>40</y>
+     <width>331</width>
+     <height>61</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>16</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>LBMS 图书馆图书管理系统
@@ -32,12 +38,18 @@
     <rect>
      <x>70</x>
      <y>90</y>
-     <width>72</width>
-     <height>15</height>
+     <width>141</width>
+     <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>书籍管理</string>
+    <string>书籍查询</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -95,8 +107,8 @@
   <widget class="QPushButton" name="research">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>270</y>
+     <x>180</x>
+     <y>280</y>
      <width>93</width>
      <height>28</height>
     </rect>
