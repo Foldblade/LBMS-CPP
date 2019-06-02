@@ -63,9 +63,6 @@
     <ClCompile Include="fail.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="success.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="scan_input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -96,6 +93,9 @@
     <ClCompile Include="domysql.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="scanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtGuiApplication5.h">
@@ -111,9 +111,6 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="fail.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="success.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="scan_input.h">
@@ -155,9 +152,6 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="fail.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="success.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="scan_input.ui">

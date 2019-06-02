@@ -31,7 +31,9 @@ void search_book_result_man::slot2() {
 void search_book_result_man::go() {
 	Operate search_book_result_man;
 	if (search_book_result_man.connect()) {
-		search_book_result_man.searchBook(isbn2, book_name2, writer2, publishing_house2);
+		if (!search_book_result_man.searchBook(isbn2, book_name2, writer2, publishing_house2)) {
+			QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("查询操作错误，请重试。"), QMessageBox::Ok);
+		}
 	}
 	else {
 		QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("远程数据库连接错误，请重试。"), QMessageBox::Ok);

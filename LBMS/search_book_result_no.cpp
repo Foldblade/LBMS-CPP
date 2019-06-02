@@ -30,7 +30,9 @@ void search_book_result_no::slot1() {
 void search_book_result_no::go() {
 	Operate search_book_no;
 	if (search_book_no.connect()) {
-		search_book_no.searchBook(isbn, book_name, writer, publishing_house);
+		if (!search_book_no.searchBook(isbn, book_name, writer, publishing_house)) {
+			QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("查询操作错误，请重试。"), QMessageBox::Ok);
+		}
 	}
 	else {
 		QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("远程数据库连接错误，请重试。"), QMessageBox::Ok);
@@ -84,10 +86,10 @@ void search_book_result_no::go() {
 	}
 	ui.tableWidget->resizeColumnsToContents(); //根据内容调整列宽
 	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
-	// ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
-	//ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
-	ui.tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
-	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
+	ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
+	// ui.tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+	// ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
 	/* 整行选中 -by F.B. */
 }
 
