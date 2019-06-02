@@ -179,6 +179,8 @@ Windows端下载【官网】：https://www.dev47apps.com/droidcam/windows/
 - [QMessageBox](https://doc.qt.io/qt-5/qmessagebox.html) *【官方文档】*
 - [QT messageBox](https://blog.csdn.net/dsg333/article/details/9665885)
 - [QT messagebox 乱码解决](https://blog.csdn.net/XuePiaoFei1/article/details/46356293)
+- [QT QTableWidget 用法总结](https://blog.csdn.net/polokang/article/details/6696982)
+- [QTableWidget设置只能选中一行](https://blog.csdn.net/feng_ye2015/article/details/87880427)
 
 #### RapidJSON
 - [RapidJSON 文档](http://rapidjson.org/zh-cn/)

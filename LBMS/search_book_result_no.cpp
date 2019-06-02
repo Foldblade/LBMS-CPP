@@ -7,6 +7,8 @@
 #include <boost/format.hpp>
 //#include <qtextcodec.h>
 
+
+/* UI initial by X.H., but modified by F.B. */
 string isbn, book_name, writer, publishing_house;
 
 search_book_result_no::search_book_result_no(QWidget *parent)
@@ -15,8 +17,17 @@ search_book_result_no::search_book_result_no(QWidget *parent)
 	ui.setupUi(this);
 }
 
+search_book_result_no::~search_book_result_no()
+{
+}
+
+void search_book_result_no::slot1() {
+	search_book* y = new search_book;
+	y->show();
+	this->hide();
+}
+
 void search_book_result_no::go() {
-	
 	Operate search_book_no;
 	if (search_book_no.connect()) {
 		search_book_no.searchBook(isbn, book_name, writer, publishing_house);
@@ -44,9 +55,6 @@ void search_book_result_no::go() {
 	/* 设置 tableWidget */
 	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << QString::fromLocal8Bit("ISBN") << QString::fromLocal8Bit("书名") << QString::fromLocal8Bit("作者") << QString::fromLocal8Bit("出版社")
 		<< QString::fromLocal8Bit("总数") << QString::fromLocal8Bit("馆藏") << QString::fromLocal8Bit("借出"));
-	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
-	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
-	ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
 
 	QString(* content)[7] = new QString[search_book_no.length][7];
 	for (int i = 0; i < search_book_no.length; i++) {
@@ -74,13 +82,16 @@ void search_book_result_no::go() {
 			ui.tableWidget->setItem(i, j, item);//setItem(行，列，内容)
 		}
 	}
+	ui.tableWidget->resizeColumnsToContents(); //根据内容调整列宽
+	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
+	// ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
+	//ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
+	ui.tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+	/* 整行选中 -by F.B. */
 }
 
-search_book_result_no::~search_book_result_no()
-{
-}
-
-void search_book_result_no::send_book_data(QString isbn, QString book_name, QString writer, QString publishing_house) {
+void search_book_result_no::receive_book_data(QString isbn, QString book_name, QString writer, QString publishing_house) {
 	::isbn = isbn.toLocal8Bit();
 	::book_name = book_name.toLocal8Bit();
 	::writer = writer.toLocal8Bit();

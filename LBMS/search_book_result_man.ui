@@ -62,7 +62,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>90</y>
+     <y>120</y>
      <width>771</width>
      <height>411</height>
     </rect>
@@ -182,13 +182,32 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>530</y>
+     <y>550</y>
      <width>631</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Tip: 点击每行前面的序号，再点击“修改此行”以修改图书信息。暂仅支持一次修改一本。</string>
+    <string>Tip: 选中一行后，再点击“修改此行”以修改图书信息。暂仅支持一次修改一条记录。</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="resultLabel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>421</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑 Light</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

@@ -17,7 +17,7 @@
    <widget class="QPushButton" name="administor">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>125</x>
       <y>140</y>
       <width>93</width>
       <height>91</height>
@@ -30,7 +30,7 @@
    <widget class="QPushButton" name="search">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>370</x>
       <y>140</y>
       <width>93</width>
       <height>91</height>
@@ -63,7 +63,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Made by T.X. &amp; X.H. with ❤ </string>
+     <string>Made by F.B. &amp; X.H. with ❤ </string>
     </property>
    </widget>
    <widget class="QLabel" name="label">

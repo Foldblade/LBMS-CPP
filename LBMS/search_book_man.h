@@ -14,6 +14,6 @@ public:
 private:
 	Ui::search_book_man ui;
 private slots:
-	void slot1();
-	void slot2();
+	void slot1(); // ∑µªÿ
+	void slot2(); // ≤È—Ø
 };
