@@ -19,11 +19,16 @@ adminitor_con::adminitor_con(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
+	Json config(".config.json"); // 读取Json文件 TODO: 改成SQL？
+	string con_name = config.doc["user"].GetString();// 提取用户名
+	string welcome = con_name + "，欢迎您！";
+	ui.welcome->setText(QString::fromLocal8Bit(welcome.data()));
 }
 
 adminitor_con::~adminitor_con()
 {
 }
+
 void adminitor_con::slot2() {
 	scan_input* x = new scan_input;
 	x->show();
@@ -43,6 +48,12 @@ void adminitor_con::slot5() {
 	borrow_return_book* x = new borrow_return_book;
 	x->show();
 	this->hide();
+}
+void adminitor_con::about() {
+	QMessageBox message(QMessageBox::NoIcon, QString::fromLocal8Bit("关于"), 
+		QString::fromLocal8Bit("<p>程序由F.B.与X.H.联合出品。</p><p>F.B.主要负责后端（扫码、数据库、配置文件等）、UI设计和前后端连接，<br />X.H.主要负责前端（Qt框架与GUI）。</p><p>程序<a href='https://github.com/Foldblade/LBMS-CPP'>在Github开源</a>。更多内容，请参阅ReadMe.md。</p>"));
+	// message.setIconPixmap(QPixmap("icon.png"));
+	message.exec();
 }
 void scan_input::slot1() {
 	adminitor_con* x = new adminitor_con;
@@ -78,25 +89,7 @@ void personal_cen::slot3() {
 	x->show();
 	this->hide();
 }//change name
-void search_book_man::slot1() {
-	adminitor_con* x = new adminitor_con;
-	x->show();
-	this->hide();
-}//返回
-void search_book_man::slot2() {
-	search_book_result_man* x = new search_book_result_man;
-	QString isbn;
-	QString book_name;
-	QString writer;
-	QString publishing_house;
-	isbn = ui.ISBN->text();
-	book_name = ui.book_name->text();
-	writer = ui.writer->text();
-	publishing_house = ui.publish->text();
-	//这里需要加入数据库；
-	x->show();
-	this->hide();
-}//查询
+
 void borrow_return_book::slot1() {
 	adminitor_con* x = new adminitor_con;
 	x->show();

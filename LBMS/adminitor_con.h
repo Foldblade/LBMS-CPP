@@ -19,4 +19,5 @@ private slots:
 	void slot3();//个人中心
 	void slot4();//书籍管理
 	void slot5();//借阅管理
+	void about();//关于
 };

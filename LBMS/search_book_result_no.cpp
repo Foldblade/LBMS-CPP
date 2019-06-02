@@ -1,28 +1,71 @@
 #include "search_book_result_no.h"
+#include "search_book.h"
+#include "domysql.h"
+#include "QMessageBox"
+#include <iostream>
+#include <string>
+#include <boost/format.hpp>
 //#include <qtextcodec.h>
 
+
+/* UI initial by X.H., but modified by F.B. */
+string isbn, book_name, writer, publishing_house;
 
 search_book_result_no::search_book_result_no(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
+}
+
+search_book_result_no::~search_book_result_no()
+{
+}
+
+void search_book_result_no::slot1() {
+	search_book* y = new search_book;
+	y->show();
+	this->hide();
+}
+
+void search_book_result_no::go() {
+	Operate search_book_no;
+	if (search_book_no.connect()) {
+		search_book_no.searchBook(isbn, book_name, writer, publishing_house);
+	}
+	else {
+		QMessageBox::warning(NULL, QString::fromLocal8Bit("出错了"), QString::fromLocal8Bit("远程数据库连接错误，请重试。"), QMessageBox::Ok);
+	}
+	//这里需要加入数据库；
+	/*So the left work are made by F.B.*/
+	
+	if (search_book_no.length == 0) {
+		ui.resultLabel->setText(QString::fromLocal8Bit("很遗憾，数据库中并没有您查询的书籍。"));
+	}
+	else {
+		boost::format f = boost::format("查找到%d本相关书籍：") % search_book_no.length;
+		string s = f.str();
+		ui.resultLabel->setText(QString::fromLocal8Bit(s.data()));
+	}
+
 	//QTextCodec* codec = QTextCodec::codecForName("GBK");
 	ui.tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
-	int NumOfReg=10000;
+	int NumOfReg = search_book_no.length; // 行数
 	ui.tableWidget->setColumnCount(7);
 	ui.tableWidget->setRowCount(NumOfReg);
 	/* 设置 tableWidget */
-	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "ISBN" << QString::fromLocal8Bit("书名") << QString::fromLocal8Bit("作者") << QString::fromLocal8Bit("出版社") << QString::fromLocal8Bit("总数") << QString::fromLocal8Bit("馆藏") << QString::fromLocal8Bit("借出") << "id");
-	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
-	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
-	ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
+	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << QString::fromLocal8Bit("ISBN") << QString::fromLocal8Bit("书名") << QString::fromLocal8Bit("作者") << QString::fromLocal8Bit("出版社")
+		<< QString::fromLocal8Bit("总数") << QString::fromLocal8Bit("馆藏") << QString::fromLocal8Bit("借出"));
 
-	QString content[5][5];
-	content[0][0] = { "1" }; content[0][1] = { "a" }; content[0][2] = { "b" }; content[0][3] = { "c" }; content[0][4] = { "d" };
-	content[1][0] = { "2" }; content[1][1] = { "a" }; content[1][2] = { "b" }; content[1][3] = { "c" }; content[1][4] = { "d" };
-	content[2][0] = { "3" }; content[2][1] = { "a" }; content[2][2] = { "b" }; content[2][3] = { "c" }; content[2][4] = { "d" };
-	content[3][0] = { "4" }; content[3][1] = { "a" }; content[3][2] = { "b" }; content[3][3] = { "c" }; content[3][4] = { "d" };
-	content[4][0] = { "5" }; content[4][1] = { "a" }; content[4][2] = { "b" }; content[4][3] = { "c" }; content[4][4] = { "d" };
+	QString(* content)[7] = new QString[search_book_no.length][7];
+	for (int i = 0; i < search_book_no.length; i++) {
+		content[i][0] = { QString::fromLocal8Bit(any_cast<string>(search_book_no.results[i]["ISBN"]).data()) };
+		content[i][1] = { QString::fromLocal8Bit(any_cast<string>(search_book_no.results[i]["title"]).data()) };
+		content[i][2] = { QString::fromLocal8Bit(any_cast<string>(search_book_no.results[i]["author"]).data()) };
+		content[i][3] = { QString::fromLocal8Bit(any_cast<string>(search_book_no.results[i]["publisher"]).data()) };
+		content[i][4] = { QString::number(any_cast<int>(search_book_no.results[i]["many"])) };
+		content[i][5] = { QString::number(any_cast<int>(search_book_no.results[i]["inside"])) };
+		content[i][6] = { QString::number(any_cast<int>(search_book_no.results[i]["outside"])) };
+	}
 	/*int linenumber, columnnumber;
 	linenumber = ;
 	columnnumber = 6;
@@ -33,16 +76,24 @@ search_book_result_no::search_book_result_no(QWidget *parent)
 			ui.tableWidget->setItem(i, j, item);//setItem(行，列，内容)
 		}
 	}*/
-	for (int i = 0; i < 5; i++) {
-		for (int j = 0; j < 5; j++) {
+	for (int i = 0; i < search_book_no.length; i++) {
+		for (int j = 0; j < 7; j++) {
 			QTableWidgetItem* item = new QTableWidgetItem(content[i][j]);
 			ui.tableWidget->setItem(i, j, item);//setItem(行，列，内容)
 		}
 	}
-
+	ui.tableWidget->resizeColumnsToContents(); //根据内容调整列宽
+	//ui.tableWidget->verticalHeader()->setVisible(false); // 隐藏水平header
+	// ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectItems);   // 单个选中
+	//ui.tableWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);  // 可以选中多个
+	ui.tableWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+	ui.tableWidget->setSelectionBehavior(QAbstractItemView::SelectRows);
+	/* 整行选中 -by F.B. */
 }
 
-search_book_result_no::~search_book_result_no()
-{
+void search_book_result_no::receive_book_data(QString isbn, QString book_name, QString writer, QString publishing_house) {
+	::isbn = isbn.toLocal8Bit();
+	::book_name = book_name.toLocal8Bit();
+	::writer = writer.toLocal8Bit();
+	::publishing_house = publishing_house.toLocal8Bit();
 }
-
