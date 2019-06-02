@@ -246,9 +246,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>save</sender>
+   <signal>clicked()</signal>
+   <receiver>search_book_result_man</receiver>
+   <slot>slot3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>456</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>575</x>
+     <y>592</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>slot1()</slot>
   <slot>slot2()</slot>
+  <slot>slot3()</slot>
  </slots>
 </ui>
