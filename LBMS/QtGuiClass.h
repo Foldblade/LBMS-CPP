@@ -5,7 +5,6 @@
 #include <QWidget>
 #include "ui_QtGuiClass.h"
 #include "adminitor_con.h"
-#include "fail.h"
 
 class QtGuiClass : public QWidget
 {
@@ -15,7 +14,6 @@ public:
 	QtGuiClass(QWidget *parent = Q_NULLPTR);
 	~QtGuiClass();
 	adminitor_con* x;//为了节省后面一行（当作没看见注释
-	fail* fa;//为了节省后面一行（当作没看见注释
 private:
 	Ui::QtGuiClass ui;
 
