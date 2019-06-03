@@ -3,6 +3,7 @@
 #include "QMessageBox"
 #include "search_book_man.h"
 #include <boost/format.hpp>
+#include "edit_book.h"
 
 using namespace std;
 
@@ -102,3 +103,8 @@ void search_book_result_man::receive_book_data(QString isbn, QString book_name, 
 	::writer2 = writer.toLocal8Bit();
 	::publishing_house2 = publishing_house.toLocal8Bit();
 }
+void search_book_result_man::slot3() {
+	edit_book* x = new edit_book;
+	x->show();
+	this->hide();
+}// 进入修改界面
