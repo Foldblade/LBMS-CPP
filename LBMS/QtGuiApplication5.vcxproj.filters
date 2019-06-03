@@ -60,9 +60,6 @@
     <ClCompile Include="adminitor_con.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fail.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="scan_input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -113,9 +110,6 @@
     <QtMoc Include="adminitor_con.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="fail.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="scan_input.h">
       <Filter>Header Files</Filter>
     </QtMoc>
@@ -155,9 +149,6 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="adminitor_con.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="fail.ui">
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="scan_input.ui">

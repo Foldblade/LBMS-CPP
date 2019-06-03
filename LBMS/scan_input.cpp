@@ -27,16 +27,17 @@ void scan_input::slot1() {
 }//return
 
 void scan_input::slot2() {
-	QString isbn, name, writer, press, many;
-	isbn = ui.isbn->text();//isbn号
-	name = ui.name->text();//书名
-	writer = ui.writer->text();//作者
-	press = ui.press->text();//出版社
+	QByteArray isbn, name, writer, press;
+	QString many;
+	isbn = ui.isbn->text().toLocal8Bit();//isbn号
+	name = ui.name->text().toLocal8Bit();//书名
+	writer = ui.writer->text().toLocal8Bit();//作者
+	press = ui.press->text().toLocal8Bit();//出版社
 	many = ui.amount->text();//数量
 	Operate uploadBook;
 	if (isbn != "" && name != "" && writer != "" && press != "" && many != "") {
 		if (uploadBook.connect()) {
-			if (uploadBook.addBook(isbn.toStdString(), name.toStdString(), writer.toStdString(), press.toStdString(), many.toInt())) {
+			if (uploadBook.addBook(string(isbn), string(name), string(writer), string(press), many.toInt())) {
 				QMessageBox::information(NULL, QString::fromLocal8Bit("成功"), QString::fromLocal8Bit("添加图书操作成功！"), QMessageBox::Ok);
 			}
 			else {

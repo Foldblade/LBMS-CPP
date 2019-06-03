@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>search_book_man</string>
+   <string>书籍管理-查询</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -49,7 +53,7 @@
     </font>
    </property>
    <property name="text">
-    <string>书籍管理</string>
+    <string>书籍管理-查询</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -160,9 +164,9 @@
   <widget class="QPushButton" name="return_2">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>332</x>
      <y>300</y>
-     <width>93</width>
+     <width>101</width>
      <height>28</height>
     </rect>
    </property>

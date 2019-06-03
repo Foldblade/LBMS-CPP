@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>search_book_result_man</string>
+   <string>书籍管理-查询结果</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -237,28 +241,12 @@
    <slot>slot2()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>153</x>
-     <y>268</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>337</x>
-     <y>134</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>save</sender>
-   <signal>clicked()</signal>
-   <receiver>search_book_result_man</receiver>
-   <slot>slot3()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>456</x>
-     <y>591</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>575</x>
+     <x>465</x>
      <y>592</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>511</x>
+     <y>590</y>
     </hint>
    </hints>
   </connection>
@@ -266,6 +254,5 @@
  <slots>
   <slot>slot1()</slot>
   <slot>slot2()</slot>
-  <slot>slot3()</slot>
  </slots>
 </ui>

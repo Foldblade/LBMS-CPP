@@ -17,6 +17,5 @@ private:
 	Ui::search_book_result_man ui;
 private slots:
 	void slot1(); // 返回
-	void slot2(); // 确认修改
-	void slot3(); // 进入修改界面
+	void slot2(); // 进入修改界面
 };

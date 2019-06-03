@@ -94,7 +94,7 @@ public:
 	bool exec_with_return(string sqlSentence);
 
 	/**
-	 * @brief addBook(string ISBN, string title, string author, string publisher, int many): 管理员添加图书
+	 * @brief addBook(string ISBN, string title, string author, string publisher, int many): 添加图书
 	 *
 	 * @param
 	 *     string ISBN: ISBN号
@@ -108,6 +108,37 @@ public:
 	 *     bool false: 失败
 	 */
 	bool addBook(string ISBN, string title, string author, string publisher, int many);
+
+	/**
+	 * @brief delBook(int ID): 删除图书
+	 *
+	 * @param
+	 *     int ID: 记录ID
+	 *
+	 * @return
+	 *     bool true: 成功
+	 *     bool false: 失败
+	 */
+	bool delBook(int ID);
+
+	/**
+	 * @brief updateBook(string isbn, string title, string writer, string publisher, int many, int inside, int outside, int ID): 更新图书信息
+	 *
+	 * @param
+	 *     string ISBN: 修改后ISBN号
+	 *     string title: 修改后书名
+	 *     string author: 修改后作者
+	 *     string publisher: 修改后出版社
+	 *     int many: 修改后总数
+	 *     int inside: 修改后馆藏数目
+	 *     int outside: 修改后借出数目
+	 *     int ID: 记录ID
+	 *
+	 * @return
+	 *     bool true: 成功
+	 *     bool false: 失败
+	 */
+	bool updateBook(string isbn, string title, string writer, string publisher, int many, int inside, int outside, int ID);
 
 	/**
 	 * @brief searchBook(string ISBN, string title, string author, string publisher): 搜索图书
@@ -148,33 +179,18 @@ public:
 	 */
 	bool return_book(string ISBN);
 
-	/**
-	 * @brief modify_book(int id): 还书
-	 *
-	 * @param
-	 *     int id: 该条记录的id
-	 *     string ISBN: 修改后的ISBN
-	 *     string title: 修改后的标题
-	 *     string author: 修改后的作者
-	 *     string publisher: 修改后的出版社
-	 *     int many: 修改后的总数
-	 *     int inside: 修改后的馆藏数
-	 *     int outside: 修改后的借出书
-	 *
-	 * @return
-	 *     bool true: 成功
-	 *     bool false: 失败
-	 */
-	bool modify_book(int id, string ISBN, string title, string author, string publisher, int many, int inside, int outside);
-
-
 	~Operate() {
-		if (con != 0)
-		{
-			delete res;
-			delete state;
-			delete con;
-		}
+		// if (con != 0)
+		// {
+		// 	if (res != 0) {
+		// 		delete res;
+		// 	}
+		// 	if (state != 0) {
+		// 		delete state;
+		// 	}
+		// 	delete con;
+		// }
+		/* Bug?? */
 	}
 };
 
@@ -187,7 +203,7 @@ using namespace sql;
 using namespace boost;
 // skip some code here
 Operate p;
-if (p.connect()) {
+if (p.connect()) { // 一定要先.connect()！！！
 	p.get_all_results();
 	for (int i = 0; i < p.length; i++) {
 		cout << any_cast<string>(p.results[i]["ISBN"]) << "\t" << any_cast<int>(p.results[i]["many"]) << endl;
@@ -195,13 +211,14 @@ if (p.connect()) {
 	p.addBook("9787220112775", "平安朝的生活与文学", "[日] 池田龟鉴", "后浪丨四川人民出版社", 2);
 	p.borrow_book("9787220112775");
 	p.return_book("9787220112775");
-	p.modify_book(15, "9787220112775", "平安朝的生活与文学", "[日] 池田龟鉴", "后浪丨四川人民出版社", 4, 3, 1);
+	p.updateBook("9787220112775", "平安朝的生活与文学", "[日] 池田龟鉴", "后浪丨四川人民出版社", 4, 3, 1, 15);
 
 	p.searchBook("9787220112775", "平安朝的生活与文学", "[日] 池田龟鉴", "后浪丨四川人民出版社");
 	cout << "——————————" << endl;
 	for (int i = 0; i < p.length; i++) {
 		cout << any_cast<string>(p.results[i]["ISBN"]) << "\t" << any_cast<int>(p.results[i]["many"]) << endl;
 	}
+	p.delBook(15);
 }
 else {
 	cout << "ERROR" << endl;

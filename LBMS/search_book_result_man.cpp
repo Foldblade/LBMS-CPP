@@ -26,9 +26,6 @@ void search_book_result_man::slot1() {
 	this->hide();
 } // 返回
 
-void search_book_result_man::slot2() {
-
-}// 确认修改
 void search_book_result_man::go() {
 	Operate search_book_result_man;
 	if (search_book_result_man.connect()) {
@@ -103,8 +100,20 @@ void search_book_result_man::receive_book_data(QString isbn, QString book_name, 
 	::writer2 = writer.toLocal8Bit();
 	::publishing_house2 = publishing_house.toLocal8Bit();
 }
-void search_book_result_man::slot3() {
+void search_book_result_man::slot2() {
 	edit_book* x = new edit_book;
 	x->show();
+	int currrentRow = ui.tableWidget->currentItem()->row();
+	QString isbn, title, writer, publisher, many, inside, outside, ID;
+	isbn = ui.tableWidget->item(currrentRow, 0)->text();
+	title = ui.tableWidget->item(currrentRow, 1)->text();
+	writer = ui.tableWidget->item(currrentRow, 2)->text();
+	publisher = ui.tableWidget->item(currrentRow, 3)->text();
+	many = ui.tableWidget->item(currrentRow, 4)->text();
+	inside = ui.tableWidget->item(currrentRow, 5)->text();
+	outside = ui.tableWidget->item(currrentRow, 6)->text();
+	ID = ui.tableWidget->item(currrentRow, 7)->text();
+	x->receive_book_data(isbn, title, writer, publisher, many, inside, outside, ID);
+	x->go();
 	this->hide();
-}// 进入修改界面
+}// 确认修改

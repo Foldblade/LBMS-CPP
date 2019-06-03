@@ -120,7 +120,6 @@
     <ClCompile Include="borrow_return_book.cpp" />
     <ClCompile Include="domysql.cpp" />
     <ClCompile Include="edit_book.cpp" />
-    <ClCompile Include="fail.cpp" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="personal_cen.cpp" />
@@ -142,7 +141,6 @@
     <QtUic Include="adminitor_con.ui" />
     <QtUic Include="borrow_return_book.ui" />
     <QtUic Include="edit_book.ui" />
-    <QtUic Include="fail.ui" />
     <QtUic Include="personal_cen.ui" />
     <QtUic Include="personal_change_name.ui" />
     <QtUic Include="personal_change_password.ui" />
@@ -165,9 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="adminitor_con.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="fail.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="scan_input.h" />

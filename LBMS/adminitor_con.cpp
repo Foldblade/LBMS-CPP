@@ -47,6 +47,6 @@ void adminitor_con::slot5() {
 void adminitor_con::about() {
 	QMessageBox message(QMessageBox::NoIcon, QString::fromLocal8Bit("关于"), 
 		QString::fromLocal8Bit("<p>程序由F.B.与X.H.联合出品。</p><p>F.B.主要负责后端（扫码、数据库、配置文件等）、UI设计和前后端连接，<br />X.H.主要负责前端（Qt框架与GUI）。</p><p>程序<a href='https://github.com/Foldblade/LBMS-CPP'>在Github开源</a>。更多内容，请参阅ReadMe.md。</p>"));
-	// message.setIconPixmap(QPixmap("icon.png"));
+	message.setIconPixmap(QPixmap("icon.png"));
 	message.exec();
 }

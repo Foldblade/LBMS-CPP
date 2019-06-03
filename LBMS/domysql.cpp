@@ -150,6 +150,43 @@ bool Operate::addBook(string ISBN, string title, string author, string publisher
 	}
 }
 
+bool Operate::delBook(int ID) {
+	try {
+		string execSentence = "DELETE FROM `library` WHERE `library`.`id` = " + to_string(ID) + ";";
+		state->execute(execSentence.c_str());
+		return true;
+	}
+	catch (sql::SQLException & e) {
+		cout << "# ERR: SQLException in " << __FILE__;
+		cout << "(" << __FUNCTION__ << ") on line "
+			<< __LINE__ << endl;
+		cout << "# ERR: " << e.what();
+		cout << " (MySQL error code: " << e.getErrorCode();
+		cout << ", SQLState: " << e.getSQLState() << " )" << endl;
+		return false;
+	}
+}
+
+bool Operate::updateBook(string isbn, string title, string writer, string publisher, int many, int inside, int outside, int ID) {
+	try {
+		string execSentence = "UPDATE `library` "
+			"SET `isbn` = '" + isbn + "', `title` = '" + title + "', `author` = '" + writer + "' , `publisher` = '" + publisher + "' , "
+			"`many` = '" + to_string(many) + "', `inside` = '" + to_string(inside) + "', `outside` = '" + to_string(outside) + "' "
+			"WHERE `library`.`id` = " + to_string(ID);
+		state->execute(execSentence.c_str());
+		return true;
+	}
+	catch (sql::SQLException & e) {
+		cout << "# ERR: SQLException in " << __FILE__;
+		cout << "(" << __FUNCTION__ << ") on line "
+			<< __LINE__ << endl;
+		cout << "# ERR: " << e.what();
+		cout << " (MySQL error code: " << e.getErrorCode();
+		cout << ", SQLState: " << e.getSQLState() << " )" << endl;
+		return false;
+	}
+}
+
 bool Operate::searchBook(string ISBN, string title, string author, string publisher) {
 	try {
 		string execSentence = "SELECT *  FROM `library` "
@@ -224,25 +261,6 @@ bool Operate::return_book(string ISBN) {
 		inside = many - outside;
 		execSentence = "UPDATE `library` SET `inside` = '" + to_string(inside) + "', `outside` = '" + to_string(outside) + 
 			"' WHERE `library`.`ISBN` = '" + ISBN + "' ";
-		state->execute(execSentence.c_str());
-		return true;
-	}
-	catch (sql::SQLException & e) {
-		cout << "# ERR: SQLException in " << __FILE__;
-		cout << "(" << __FUNCTION__ << ") on line "
-			<< __LINE__ << endl;
-		cout << "# ERR: " << e.what();
-		cout << " (MySQL error code: " << e.getErrorCode();
-		cout << ", SQLState: " << e.getSQLState() << " )" << endl;
-		return false;
-	}
-}
-
-bool Operate::modify_book(int id, string ISBN, string title, string author, string publisher, int many, int inside, int outside) {
-	try {
-		string execSentence = "UPDATE `library` SET `ISBN` = '" + ISBN + "', `title` = '" + title + "', `author` = '" + author + 
-			"', `publisher` = '" + publisher + "', `many` = '" + to_string(many) + "', `inside`='" + to_string(inside) + "', `outside`='" + to_string(outside) + 
-			"' WHERE `library`.`id` = '" + to_string(id) + "' ";
 		state->execute(execSentence.c_str());
 		return true;
 	}

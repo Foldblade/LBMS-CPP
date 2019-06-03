@@ -7,11 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>400</height>
+    <height>376</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>QtGuiApplication5</string>
+   <string>LBMS</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="administor">
@@ -69,14 +73,26 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>90</x>
       <y>30</y>
-      <width>351</width>
+      <width>421</width>
       <height>81</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;LBMS图书馆图书管理系统&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>LBMS 图书馆图书管理系统</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

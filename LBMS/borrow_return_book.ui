@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>borrow_return_book</string>
+   <string>借阅管理</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -40,19 +44,25 @@
     <rect>
      <x>70</x>
      <y>110</y>
-     <width>72</width>
-     <height>15</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>录入信息：</string>
+    <string>录入信息</string>
    </property>
   </widget>
   <widget class="QPushButton" name="opencv">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>100</y>
+     <y>111</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -121,6 +131,25 @@
    </property>
    <property name="text">
     <string>回到管理中心</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>借阅管理</string>
    </property>
   </widget>
  </widget>
