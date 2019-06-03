@@ -2,6 +2,8 @@
 
 C++课设：Library Book Management Syetem (Written in CPP) 
 
+![LBMS0LOGO](/LBMS/icon.png)
+
 LBMS：陆基弹道导弹系统
 
 这是一个无害的LBMS~！（笑）
