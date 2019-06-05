@@ -202,11 +202,15 @@ Windows端下载【官网】：https://www.dev47apps.com/droidcam/windows/
 - [C++连接mysql数据库时，用getString()方法总是出错](https://ask.csdn.net/questions/236975) *【加个c_str()】*
 
 #### Qt
-- [QMessageBox](https://doc.qt.io/qt-5/qmessagebox.html) *【官方文档】*
+- [在VS环境下实现Qt5两个窗口相互切换](http://www.pianshen.com/article/1255295991/)
+- [【Qt编程】Qt学习之窗口间的相互切换](https://blog.csdn.net/tengweitw/article/details/21275721)
+- - [QMessageBox](https://doc.qt.io/qt-5/qmessagebox.html) *【官方文档】*
 - [QT messageBox](https://blog.csdn.net/dsg333/article/details/9665885)
 - [QT messagebox 乱码解决](https://blog.csdn.net/XuePiaoFei1/article/details/46356293)
 - [QT QTableWidget 用法总结](https://blog.csdn.net/polokang/article/details/6696982)
 - [QTableWidget设置只能选中一行](https://blog.csdn.net/feng_ye2015/article/details/87880427)
+- [Qt QTableWidget的使用方式](https://blog.csdn.net/comwise/article/details/51544939)
+- [设置QTableWidgetItem不可编辑和可编辑状态](https://blog.csdn.net/seekn/article/details/72765528)
 
 #### RapidJSON
 - [RapidJSON 文档](http://rapidjson.org/zh-cn/)
