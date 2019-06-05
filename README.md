@@ -204,7 +204,7 @@ Windows端下载【官网】：https://www.dev47apps.com/droidcam/windows/
 #### Qt
 - [在VS环境下实现Qt5两个窗口相互切换](http://www.pianshen.com/article/1255295991/)
 - [【Qt编程】Qt学习之窗口间的相互切换](https://blog.csdn.net/tengweitw/article/details/21275721)
-- - [QMessageBox](https://doc.qt.io/qt-5/qmessagebox.html) *【官方文档】*
+- [QMessageBox](https://doc.qt.io/qt-5/qmessagebox.html) *【官方文档】*
 - [QT messageBox](https://blog.csdn.net/dsg333/article/details/9665885)
 - [QT messagebox 乱码解决](https://blog.csdn.net/XuePiaoFei1/article/details/46356293)
 - [QT QTableWidget 用法总结](https://blog.csdn.net/polokang/article/details/6696982)
