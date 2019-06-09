@@ -10,6 +10,8 @@ LBMS：陆基弹道导弹系统
 
 [![Badge](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg?style=flat-square)](https://996.icu/#/zh_CN)[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
+**任何人不得将本Repository用于除两位Collaborators以外任何人的《C++程序设计基础》课程设计作业。**
+
 [TOC]
 
 ## 综述
