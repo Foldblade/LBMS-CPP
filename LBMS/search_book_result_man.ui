@@ -211,7 +211,7 @@
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>查询中……</string>
    </property>
   </widget>
  </widget>
