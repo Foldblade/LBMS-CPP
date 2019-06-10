@@ -182,6 +182,10 @@ Windows端下载【官网】：https://www.dev47apps.com/droidcam/windows/
 
 请务必记得，在上传sql文件后，将`LBMS`目录下的`.sql_config(origin).json`拷贝为`.sql_config.json`并使用代码编辑器进行编辑。
 
+## 授权协议
+
+**任何人不得将本Repository用于除两位Collaborators以外任何人的《C++程序设计基础》课程设计作业。**
+
 ## 致谢
 
 ### 参考文档
